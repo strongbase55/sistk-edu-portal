@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="4th-cse-waste-management-quiz.css">
+</head>
+
+<body>
+    <div id="questions"></div>
+    <button id="submit-button" >Submit</button>
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="results">
+                <h2>Quiz Results</h2>
+                <div id="score"></div>
+            </div>
+            <div id="selected-answers"></div>
+            <div class="popup-buttons">
+                <button id="rewrite-test" class="popup-button">Rewrite Test</button>
+                <button id="next-lesson" class="popup-button" disabled>Next Lesson</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="4th-cse-waste-management-quiz.js">
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="4th-cse-waste-management-quiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Unit-1 Quiz</h1>
+        <div id="questions"></div>
+        <button id="submit-button" enable>Submit</button>
+        <button id="cancel-button"onclick="back()" enable>Back</button>
+    </div>
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="results">
+                <h2>Quiz Results</h2>
+                <div id="score"></div>
+            </div>
+            <div id="selected-answers"></div>
+            <div id="popup-buttons">
+                <button id="rewrite-test">Rewrite Test</button>
+                <button id="next-lesson" disabled>Next Lesson</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="4th-cse-waste-management-quiz.js">
+
+    </script>
+    <script>
+        function back(){
+            window.location.href="4th-cse-unit-1.html";
+        }
+    </script>
+</body>
+
+</html>
