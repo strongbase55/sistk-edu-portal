@@ -257,7 +257,7 @@ closeBtn.addEventListener("click", hideModal);
 
 // Function to check if the score is passing (e.g., 90% or higher)
 function checkPassingScore(score, totalQuestions) {
-  const passingScore = 0.5 * totalQuestions; // 90% passing score
+  const passingScore = 0.1 * totalQuestions; // 90% passing score
   if (score >= passingScore) {
     nextLessonButton.disabled = false;
   }
