@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Student Feedback Form</h2>
+        <form id="feedbackForm" name="contact-form">
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input type="text" class="form-control" id="studentName" name="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="rollNumber">Roll Number</label>
+                <input type="text" class="form-control" id="rollNumber" name="Roll Number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Feedback</label>
+                <textarea class="form-control" id="feedback" name="Feedback" rows="4" required></textarea>
+            </div>
+            <input type="submit" value="Submit" id="submit" class="btn btn-primary">
+        </form>
+    </div>
+
+    <script src="Google Sheet.js"></script>
+    <!-- <script>
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzYQiTxK4wKYfutA8JcWoda7F0GDmt7fXnutsdsKy1rUrFs8jcwijDYBdBx0zSn8K_XSw/exec'
+
+        const form = document.forms['contact-form']
+
+        form.addEventListener('submit', e => {
+
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thank you! your form is submitted successfully."))
+                .then(() => { window.location.reload(); })
+                .catch(error => console.error('Error!', error.message))
+        })
+
+    </script> -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzYQiTxK4wKYfutA8JcWoda7F0GDmt7fXnutsdsKy1rUrFs8jcwijDYBdBx0zSn8K_XSw/exec';
+        const form = document.forms['contact-form'];
+    
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    alert("Thank you! your form is submitted successfully.");
+                    window.location.href = 'CCunit-1-quiz.html'; // Redirect to index.html
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+    
+</body>
+
+</html>
