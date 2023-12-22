@@ -162,7 +162,7 @@
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(errorMessage);
-                alert(errorMessage);
+                alert("Sorry You Cant Write Exam Again");
                 if (errorCode === 'auth/invalid-email') {
                     showErrorMessage('The email address you entered is invalid.');
                 } else if (errorCode === 'auth/wrong-password') {
