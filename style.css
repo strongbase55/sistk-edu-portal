@@ -1,0 +1,382 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  height: 6px;
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: pink;
+}
+
+#welcome-header {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+#total-code {
+  display: none;
+}
+
+.admin-container {
+  width: 100%;
+  max-width: none;
+}
+
+#admin-content {
+  padding: 20px;
+}
+
+#admin-content h3 {
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background-color: #555;
+  color: white;
+}
+
+.navbar-nav a {
+  font-weight: bolder;
+  color: white;
+}
+
+.tab-content {
+  padding: 20px;
+}
+
+.user-info-container {
+  display: flex;
+  overflow-x: auto;
+  /* Enable horizontal scrolling */
+  margin-bottom: 20px;
+  width: 100%;
+  /* Adjust this width as needed */
+}
+
+.user-info {
+  width: 300px;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-info:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.user-photo {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.user-details {
+  padding: 20px;
+}
+
+.user-details h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.user-details p {
+  margin: 5px 0;
+  color: #777;
+}
+
+.user-photo {
+  height: 200px;
+  width: 200px;
+}
+
+@media (max-width: 576px) {
+  .user-photo {
+    display: none;
+  }
+
+  .navbar-toggler-icon {
+    background-color: #000000;
+    /* Change icon background color */
+    color: white;
+    /* Change icon color */
+    border-radius: 5px;
+    /* Optional: Add border-radius for a rounded look */
+  }
+
+  .navbar-collapse {
+    background-color: #333;
+  }
+
+  .navbar-toggler {
+    background-color: #444;
+    float: right;
+    /* Float the toggle icon to the right */
+  }
+
+  .nav-item {
+    text-align: center;
+  }
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.navbar {
+  background-color: #444;
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+.navbar-nav {
+  width: 100%;
+  justify-content: space-around;
+}
+
+#navbar {
+  background-color: #444;
+  color: white;
+  padding: 10px;
+  position: relative;
+}
+
+.navbar-toggler {
+  background-color: #555;
+  /* Background color */
+  color: white;
+  /* Text color */
+  border: none;
+  /* Remove border */
+  padding: 8px 15px;
+  /* Padding for better appearance */
+  border-radius: 5px;
+  /* Optional: Rounded corners */
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+  /* Add transition for smoother change */
+  float: right;
+  /* Float the toggle icon to the right */
+  right: 0px;
+}
+
+.navbar-toggler:hover {
+  background-color: #777;
+  /* Change background color on hover */
+}
+
+.user-info-container {
+  display: flex;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  min-width: 100%;
+  overflow-y: hidden;
+}
+
+.user-info {
+  min-width: 300px;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-info:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.user-photo {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.user-details {
+  padding: 20px;
+}
+
+.user-details h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.user-details p {
+  margin: 5px 0;
+  color: #777;
+}
+
+@media (max-width: 576px) {
+  .user-photo {
+    display: block;
+    /* Change from 'none' to 'block' to make it visible */
+    max-height: 100px;
+    /* Adjust the height as needed */
+    object-fit: contain;
+    /* Adjust the object-fit property as needed */
+  }
+
+  /* Other existing styles for mobile view */
+}
+
+/* Add the following styles to your existing styles or replace the existing styles */
+
+.card {
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.card-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.list-group {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1em;
+
+}
+
+/* Updated styling for list items */
+.list-group-item {
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  flex-direction: row;
+}
+
+.list-group-item:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* New styling for Mathematics Result tab */
+#mathematics-result-content {
+  padding: 20px;
+}
+
+@media (max-width: 576px) {
+  .card {
+    margin-bottom: 10px;
+  }
+}
+
+/* login page */
+/* Updated styling for login section */
+.login-section {
+  min-height: 100vh;
+  width: 100%;
+  background: rgb(165, 85, 85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Center content vertically and horizontally */
+}
+
+#login-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-width: 100%;
+  margin: auto; /* Center the login container */
+}
+
+
+#login-container h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.error-message {
+  color: #dc3545;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#total-code {
+  display: none;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-I4pZYSMo1SMtGRNj/T6ynCdXZyl/qZC5P1NHv0a4ZRndf3Ot9v2XAZCr20ui5Ml5z5L/3+6ZGyEd9QJp2ffudw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Login Page</title>
+</head>
+
+<body>
+
+    <div id="welcome-header">
+        <h2>Welcome to the Sistk CSE Admin Page</h2>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#dashboard"
+                        onclick="showTab('dashboard')">Maths Results</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#1year" onclick="showTab('1year')">Maths Feedback</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);" onclick="goBackToAdmin()">Back</a>
+                </li>
+                
+                   <!-- Add other year tabs as needed -->
+
+            </ul>
+        </div>
+    </nav>
+
+    <div id="admin-container" class="admin-container hidden">
+        <div id="admin-content">
+            <div class="tab-content" id="user-info-tabContent">
+                <!-- Dashboard Tab -->
+                <div class="tab-pane active" id="dashboard">
+                    <iframe
+                        src="https://script.google.com/macros/s/AKfycby82i2yKR1Q66WiS0QWfxWXuehK53yMLemC0w7CGihXvAox_jGiAhiq9LboFY0Wt_tDjg/exec"
+                        width="100%" height="600px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    <!-- Repeat the structure for additional users -->
+                </div>
+            </div>
+            <!-- 1 Year Tab -->
+            <div class="tab-pane" id="1year">
+                <iframe
+                    src="https://script.google.com/macros/s/AKfycbzYQmU7uUlwKAeCDfn4bAJ_PgdsIvCgYvcSszXHQGw8YaAvSlNaFPa_Lz9j5ykfRZyEGg/exec"
+                    width="100%" height="600px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+            </div>
+            <!-- 2 Year Tab -->
+
+        </div>
+    </div>
+    <script src="admin.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- to disable the back option in the chrome arrows -->
+    <script>
+        // Add the code to disable the back button
+        window.history.pushState(null, null, window.location.href);
+        window.onpopstate = function () {
+            window.history.pushState(null, null, window.location.href);
+        };
+    </script>
+    <!-- automatically refresh the page after every few min to update the data in excel sheet -->
+    <!-- Add this script at the end of your HTML body -->
+<script>
+    setInterval(function () {
+        location.reload();
+    }, 30000); // Refresh every 5 minutes
+</script>
+
+</body>
+
+</html>

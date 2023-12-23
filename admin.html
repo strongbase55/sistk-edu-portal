@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-I4pZYSMo1SMtGRNj/T6ynCdXZyl/qZC5P1NHv0a4ZRndf3Ot9v2XAZCr20ui5Ml5z5L/3+6ZGyEd9QJp2ffudw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Login Page</title>
+</head>
+
+<body>
+
+
+    <div class="login-section" id="login-section">
+        <div class="login-container"id="login-container">
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="authenticate()">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <p class="error-message" id="errorMessage"></p>
+        </div>
+    </div>
+    <div class="total-code" id="total-code">
+        <div id="welcome-header">
+            <h2>Welcome to the Sistk CSE Admin Page</h2>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#dashboard"
+                            onclick="showTab('dashboard')">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#1year" onclick="showTab('1year')">1 Year</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#2year" onclick="showTab('2year')">2 Year</a>
+                    </li>
+                    <!-- Add other year tabs as needed -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#3year" onclick="showTab('3year')">3 Year</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#4year" onclick="showTab('4year')">4 Year</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="logout()">LogOut</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="admin-container" class="admin-container hidden">
+            <div id="admin-content">
+                <div class="tab-content" id="user-info-tabContent">
+                    <!-- Dashboard Tab -->
+                    <div class="tab-pane active" id="dashboard">
+                        <h3>Faculties</h3>
+                        <div class="user-info-container">
+                            <div class="user-info">
+                                <img class="user-photo"
+                                    src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
+                                    alt="User Photo">
+                                <div class="user-details">
+                                    <h4>Name: Mr. Manivasgam</h4>
+                                    <p>Email: user@example.com</p>
+                                    <p>Phone Number: +1234567890</p>
+                                    <p>Designation: Head Of The Department</p>
+                                </div>
+                            </div>
+                            <div class="user-info">
+                                <img class="user-photo"
+                                    src="https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg"
+                                    alt="User Photo">
+                                <div class="user-details">
+                                    <h4>User Name</h4>
+                                    <p>Email: user@example.com</p>
+                                    <p>Phone Number: +1234567890</p>
+                                </div>
+                            </div>
+                            <div class="user-info">
+                                <img class="user-photo"
+                                    src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
+                                    alt="User Photo">
+                                <div class="user-details">
+                                    <h4>Name: Mr. Manivasgam</h4>
+                                    <p>Email: user@example.com</p>
+                                    <p>Phone Number: +1234567890</p>
+                                    <p>Designation: Head Of The Department</p>
+                                </div>
+                            </div>
+                            <div class="user-info">
+                                <img class="user-photo"
+                                    src="https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg"
+                                    alt="User Photo">
+                                <div class="user-details">
+                                    <h4>User Name</h4>
+                                    <p>Email: user@example.com</p>
+                                    <p>Phone Number: +1234567890</p>
+                                </div>
+                            </div>
+                            <div class="user-info">
+                                <img class="user-photo"
+                                    src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
+                                    alt="User Photo">
+                                <div class="user-details">
+                                    <h4>Name: Mr. Manivasgam</h4>
+                                    <p>Email: user@example.com</p>
+                                    <p>Phone Number: +1234567890</p>
+                                    <p>Designation: Head Of The Department</p>
+                                </div>
+                            </div>
+                            <div class="user-info">
+                                <img class="user-photo"
+                                    src="https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg"
+                                    alt="User Photo">
+                                <div class="user-details">
+                                    <h4>User Name</h4>
+                                    <p>Email: user@example.com</p>
+                                    <p>Phone Number: +1234567890</p>
+                                </div>
+                            </div>
+                            <!-- Repeat the structure for additional users -->
+                        </div>
+                    </div>
+                    <!-- 1 Year Tab -->
+                    <div class="tab-pane" id="1year">
+                        <h3>DEPARTMENTS AND SUBJECTS</h3>
+                        <!-- Existing content for 1 Year -->
+                        <div class="card" id="cseCard">
+                            <div class="card-header">
+                                Computer Science and Engineering (CSE)
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Subjects:</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item" id="mathematics" onclick="maths()">Mathematics</li>
+                                    <li class="list-group-item">Physics</li>
+                                    <li class="list-group-item">Chemistry</li>
+                                    <li class="list-group-item">Basic Electrical and Electronics Engineering (BEEE)</li>
+                                    <li class="list-group-item">Professional Ethics and Entrepreneurship (PEE)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Card for Computer Science Department -->
+                        <div class="card mt-4">
+                            <div class="card-header">
+                                Computer Science
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Subjects:</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item">Data Structures</li>
+                                    <li class="list-group-item">Algorithms</li>
+                                    <li class="list-group-item">Database Management Systems</li>
+                                    <li class="list-group-item">Web Development</li>
+                                    <li class="list-group-item">Operating Systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 Year Tab -->
+                    <div class="tab-pane" id="2year">
+                        <h3>2 Year Content</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+                    </div>
+                    <!-- Add other year tabs content as needed -->
+                    <div class="tab-pane" id="3year">
+                        <h3>3 Year Content</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+                    </div>
+                    <div class="tab-pane" id="4year">
+                        <h3>4 Year Content</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+                    </div>
+                    <!-- Mathematics Tab -->
+                    <div class="tab-pane" id="mathematics-content" style="display: none;">
+                        <!-- Existing Mathematics Navbar and Tab Panes -->
+                        <div id="mathematics-nav" class="navbar navbar-expand-lg">
+                            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                                data-target="#mathematics-nav-links" aria-controls="mathematics-nav-links"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                Menu
+                            </button>
+                            <div class="collapse navbar-collapse" id="mathematics-nav-links">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#maths-results"
+                                            onclick="showMathsTab('maths-results')">Maths Results</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#maths-feedback"
+                                            onclick="showMathsTab('maths-feedback')">Maths Feedback</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Tab pane for Maths Results -->
+                        <div class="tab-pane" id="maths-results">
+                            <h3>Maths Results</h3>
+                            <div id="maths-results-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <!-- Add more content as needed -->
+                            </div>
+                        </div>
+                        <!-- Tab pane for Maths Feedback -->
+                        <div class="tab-pane" id="maths-feedback">
+                            <h3>Maths Feedback</h3>
+                            <div id="maths-feedback-content">
+                                <!-- Add content for Maths Feedback here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        // Add the code to disable the back button
+        window.history.pushState(null, null, window.location.href);
+        window.onpopstate = function () {
+            window.history.pushState(null, null, window.location.href);
+        };
+    </script>
+
+</body>
+
+</html>
