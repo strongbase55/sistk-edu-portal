@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-I4pZYSMo1SMtGRNj/T6ynCdXZyl/qZC5P1NHv0a4ZRndf3Ot9v2XAZCr20ui5Ml5z5L/3+6ZGyEd9QJp2ffudw=="
         crossorigin="anonymous" />
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="style.css">
 
     <title>Login Page</title>
 </head>
@@ -40,8 +40,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="javascript:void(0);" onclick="goBackToAdmin()">Back</a>
                 </li>
-                
-                   <!-- Add other year tabs as needed -->
+
+                <!-- Add other year tabs as needed -->
 
             </ul>
         </div>
@@ -60,7 +60,10 @@
             </div>
             <!-- 1 Year Tab -->
             <div class="tab-pane" id="1year">
-               <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS39eqQzgcQZqtN1rplSi8sDa87E3itkrjlT5fXSC8PCAOuYuxSUJ0DL6glFkyAWHQCjpzlwkpwFvBt/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                <iframe
+                    src="https://script.google.com/macros/s/AKfycby70kMA1MfRJhunU4WMuY0BQYTTtq-xNlTE_Z3YvDukJo0Z9PAv8XK-b1HAbBPMA8Yw8g/exec"
+                    width="100%" height="600px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
             </div>
             <!-- 2 Year Tab -->
 
@@ -81,11 +84,11 @@
     </script>
     <!-- automatically refresh the page after every few min to update the data in excel sheet -->
     <!-- Add this script at the end of your HTML body -->
-<script>
-    setInterval(function () {
-        location.reload();
-    }, 30000); // Refresh every 5 minutes
-</script>
+    <script>
+        setInterval(function () {
+            location.reload();
+        }, 30000); // Refresh every 5 minutes
+    </script>
 
 </body>
 
